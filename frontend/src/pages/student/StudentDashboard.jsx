@@ -2,7 +2,7 @@ import React from 'react'
 import StatCard from '../../components/StatCard'
 
 const stats = [
-  { label: 'Applied Jobs', value: 12, color: 'blue' },
+  { label: 'Applied Placement Drives', value: 12, color: 'blue' },
   { label: 'Selected', value: 3, color: 'green' },
   { label: 'Pending', value: 5, color: 'yellow' },
   { label: 'Rejected', value: 4, color: 'red' },
@@ -29,7 +29,7 @@ const StudentDashboard = () => (
       <h1 className="text-3xl md:text-4xl font-extrabold text-blue-800 mb-2 tracking-tight">
         Welcome, <span className="text-blue-500">Student Name</span>!
       </h1>
-      <p className="text-gray-600 text-lg">Here’s an overview of your placement activity.</p>
+      <p className="text-gray-600 text-lg">Here’s an overview of your placement drive activity.</p>
     </div>
 
     {/* Statistics Cards */}
@@ -44,9 +44,9 @@ const StudentDashboard = () => (
       ))}
     </div>
 
-    {/* Recent Applications Table */}
+    {/* Recent Placement Drive Applications Table */}
     <div className="bg-white rounded-2xl shadow-lg p-6">
-      <h2 className="text-xl md:text-2xl font-semibold text-blue-700 mb-4">Recent Applications</h2>
+      <h2 className="text-xl md:text-2xl font-semibold text-blue-700 mb-4">Recent Placement Drive Applications</h2>
       <div className="overflow-x-auto">
         <table className="min-w-full text-left">
           <thead>

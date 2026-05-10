@@ -1,6 +1,6 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
-
+import PlacementStats from '../pages/student/PlacementStats'
 // Public pages
 import Login from '../pages/public/Login'
 import Register from '../pages/public/Register'
@@ -8,7 +8,7 @@ import Home from '../pages/public/Home'
 
 // Student pages
 import StudentDashboard from '../pages/student/StudentDashboard'
-import Jobs from '../pages/student/Jobs'
+import Jobs from '../pages/student/jobs'
 import AppliedJobs from '../pages/student/AppliedJobs'
 import StudentProfile from '../pages/student/Profile'
 
@@ -39,6 +39,7 @@ const AppRoutes = () => (
       <Route path="dashboard" element={<StudentDashboard />} />
       <Route path="jobs" element={<Jobs />} />
       <Route path="appliedjobs" element={<AppliedJobs />} />
+      <Route path="placement-stats" element={<PlacementStats />} />
       <Route path="profile" element={<StudentProfile />} />
     </Route>
 
@@ -46,15 +47,15 @@ const AppRoutes = () => (
     <Route path="/recruiter" element={<DashboardLayout />}>
       <Route path="dashboard" element={<RecruiterDashboard />} />
       <Route path="jobs" element={<ManageJobs />} />
-      <Route path="appliedjobs" element={<Applicants />} />
+      <Route path="applicants" element={<Applicants />} />
       <Route path="profile" element={<RecruiterProfile />} />
     </Route>
 
     {/* Admin dashboard routes */}
     <Route path="/admin" element={<DashboardLayout />}>
       <Route path="dashboard" element={<AdminDashboard />} />
-      <Route path="jobs" element={<ManageUsers />} />
-      <Route path="appliedjobs" element={<Reports />} />
+      <Route path="users" element={<ManageUsers />} />
+      <Route path="reports" element={<Reports />} />
       <Route path="profile" element={<AdminProfile />} />
     </Route>
   </Routes>

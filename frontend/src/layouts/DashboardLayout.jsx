@@ -21,12 +21,17 @@ const DashboardLayout = () => {
             </li>
             <li>
               <Link to={`/${base}/jobs`} className="block px-6 py-2 rounded-l-full transition-colors hover:bg-blue-600">
-                Jobs
+                Placement Drives
               </Link>
             </li>
             <li>
               <Link to={`/${base}/appliedjobs`} className="block px-6 py-2 rounded-l-full transition-colors hover:bg-blue-600">
                 Applications
+              </Link>
+            </li>
+            <li>
+              <Link to={`/${base}/placement-stats`} className="block px-6 py-2 rounded-l-full transition-colors hover:bg-blue-600">
+                Placement Stats
               </Link>
             </li>
             <li>
