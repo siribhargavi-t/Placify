@@ -8,7 +8,7 @@ import Register from '../pages/public/Register'
 
 // Student pages
 import StudentDashboard from '../pages/student/StudentDashboard'
-import Jobs from '../pages/student/jobs'
+import Jobs from '../pages/student/Jobs'
 import AppliedJobs from '../pages/student/AppliedJobs'
 import StudentProfile from '../pages/student/Profile'
 
