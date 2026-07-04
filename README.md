@@ -1,10 +1,44 @@
 # 🚀 Placify
 
-> **Full-Stack Campus Recruitment & Placement Management Platform**
+> **Full-Stack MERN-Based Campus Recruitment & Placement Management Platform**
 
-Placify is a full-stack MERN application designed to streamline campus recruitment by connecting students, Training & Placement Officers (TPOs), and administrators on a single platform. It automates the placement workflow, manages recruitment drives, tracks student applications, and provides real-time notifications throughout the hiring process.
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-Express-339933?logo=node.js&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-47A248?logo=mongodb&logoColor=white)
+![JWT](https://img.shields.io/badge/Auth-JWT-orange)
+![Render](https://img.shields.io/badge/Deployment-Render-46E3B7)
+![License](https://img.shields.io/badge/License-Educational-blue)
 
-🌐 **Live Demo:** https://placify-f81j.onrender.com
+Placify is a **full-stack MERN application** designed to streamline campus recruitment by connecting **Students**, **Training & Placement Officers (TPOs)**, and **Administrators** on a single platform.
+
+The platform automates the complete placement lifecycle—from student registration and profile verification to job applications, recruitment stages, selection tracking, email notifications, and placement analytics.
+
+---
+
+## 🌐 Live Demo
+
+**🔗 Live Application:**  
+https://placify-f81j.onrender.com
+
+**💻 GitHub Repository:**  
+https://github.com/siribhargavi-t/Placify
+
+---
+
+# ⭐ Key Highlights
+
+- 🚀 Full MERN Stack Application
+- 🔐 JWT Authentication
+- 👥 Role-Based Access Control (RBAC)
+- 📧 Automated Email Notifications using Nodemailer
+- 🏢 Placement Drive Management
+- 📊 Placement Analytics Dashboard
+- 📄 Resume Upload & Profile Verification
+- 🎯 Eligibility Calculator
+- 🕒 Student Activity Timeline
+- ☁️ MongoDB Atlas Integration
+- 🌐 Live Deployment on Render
+- 📱 Responsive User Interface
 
 ---
 
@@ -16,10 +50,12 @@ Placify is a full-stack MERN application designed to streamline campus recruitme
 - [Folder Structure](#-folder-structure)
 - [User Roles](#-user-roles)
 - [Application Workflow](#-application-workflow)
+- [REST API Overview](#-rest-api-overview)
 - [Database Models](#-database-models)
 - [Installation](#-installation)
 - [Environment Variables](#-environment-variables)
 - [Demo Credentials](#-demo-credentials)
+- [Screenshots](#-screenshots)
 - [Future Enhancements](#-future-enhancements)
 
 ---
@@ -29,127 +65,157 @@ Placify is a full-stack MERN application designed to streamline campus recruitme
 ## 🔐 Authentication & Security
 
 - JWT Authentication
-- Secure Password Storage (bcrypt)
+- Secure Password Hashing using bcrypt
 - Role-Based Access Control (RBAC)
-- Protected Routing on Frontend and API layers
-- Session Restoration via LocalStorage JWTs
-- Account Suspension / Activation controls
-- Student Verification workflows
+- Protected Frontend Routes
+- Protected Backend APIs
+- Session Restoration
+- Student Verification Workflow
+- Account Suspension / Activation
+- Secure REST APIs
 
 ---
 
 ## 👨‍🎓 Student Features
 
-- **Student Dashboard**: Overview of profile status and eligible job stats.
-- **Placement Readiness Indicator**: Shows completeness of profile and links.
-- **Academic Eligibility Calculator**: Check drive eligibility in real-time.
-- **Browse & Filter Placement Drives**: Find open drives instantly.
-- **Apply to Eligible Drives**: One-click application with eligibility guardrails.
-- **Resume Upload**: Add a PDF resume profile link.
-- **Social Portfolios**: Connect GitHub & LinkedIn links.
-- **Application History**: Complete list of past applications.
-- **Activity Timeline**: Visual step-by-step progress tracking for each application.
-- **Real-Time Notification Banner**: For general updates and application round changes.
+- Student Dashboard
+- Placement Readiness Indicator
+- Academic Eligibility Calculator
+- Browse Placement Drives
+- Search & Filter Drives
+- One-Click Job Applications
+- Resume Upload
+- GitHub & LinkedIn Portfolio Links
+- Activity Timeline
+- Application History
+- Verification Status Banner
+- Notification Center
 
-### Placement Rules
+### 📌 Placement Rules
 
-- Profile verification from TPO is required before applying.
-- Resume link must be present.
-- Maximum 3 active applications allowed at a time.
-- Eligibility checks automatically run based on Department, CGPA, and status.
+- Profile must be verified before applying
+- Resume upload is mandatory
+- Maximum 3 active applications
+- Dream Upgrade Policy
+- Automatic eligibility checking based on:
+  - Department
+  - CGPA
+  - Attendance
+  - Backlogs
 
 ---
 
 ## 👨‍💼 Training & Placement Officer (TPO)
 
-- **Dashboard Analytics**: Track selection rates, active drives, and pending verifications.
-- **Placement Drive CRUD**: Full control to create, read, update, and end recruitment drives.
-- **Applicant Management**: View students who applied to specific drives.
-- **Student Verification Dashboard**: Verify student credentials, CGPA transcripts, and profile links.
-- **Hiring Stage Advancement**: Move students through recruitment stages (e.g. Aptitude Test, Tech Round, HR Round, Selected, Rejected).
-- **Feedback Management**: Provide clear notes/instructions during round transitions.
-- **Bulk Selection / Export**: CSV and PDF export options for recruiters.
+- Dashboard Analytics
+- Placement Drive CRUD Operations
+- Student Verification
+- Applicant Management
+- Recruitment Stage Progression
+- Bulk Candidate Updates
+- CSV Export
+- Search & Filtering
+- Feedback Management
 
 ---
 
 ## 👨‍💼 Admin Features
 
-- **Overall Placement Statistics**: High-level university placement stats.
-- **Department-wise Analytics**: Selection ratios by CS, IT, ECE, etc.
-- **User Management**: Direct control to activate/suspend student or TPO accounts.
-- **Reports Dashboard**: Generate detailed recruitment history reports.
+- Overall Placement Statistics
+- Department-wise Reports
+- User Management
+- Account Suspension
+- Placement Analytics Dashboard
+- Reports Generation
 
 ---
 
 ## 📧 Email Notifications
 
-Automatic emails are sent to students when their application status is updated by a TPO.
+Automatic emails are sent whenever a student's application status changes.
 
-Supported transition templates include:
+Supported email templates include:
 
-- 📝 Aptitude Test scheduled
-- 💻 Technical Interview scheduled
-- 👤 HR Interview scheduled
-- 🎉 Selected (Offer Extended)
-- ⏳ Rejected
+- 📝 Aptitude Test
+- 💻 Technical Interview
+- 👤 HR Interview
+- 🎉 Selected
+- ❌ Rejected
 
-Emails are generated using **Nodemailer** with premium, fully-responsive CSS templates.
-
----
-
-## 🔔 Notifications
-
-- In-app notification center for Students, TPOs, and Admins.
-- Broadcast notifications sent by TPO to all registered users.
+Powered by **Nodemailer** using responsive HTML email templates.
 
 ---
 
+## 🔔 Notification System
+
+- Student Notifications
+- TPO Notifications
+- Admin Notifications
+- Broadcast Notifications
+- Toast Alerts
+- Real-Time Status Updates
 # 🛠 Tech Stack
 
-## Frontend
+## 🎨 Frontend
 
-- **React.js**
-- **Vite** (Next-gen bundling tool)
-- **Context API** (State Management)
-- **React Router Dom v6** (Client routing)
-- **Vanilla CSS / TailwindCSS**
-
----
-
-## Backend
-
-- **Node.js**
-- **Express.js** (REST API)
-- **JWT (JsonWebToken)**
-- **Mongoose** (ODM)
-- **Nodemailer** (Transactional SMTP Emails)
+- React.js
+- Vite
+- React Router DOM
+- Context API
+- CSS
+- Responsive UI
 
 ---
 
-## Database
+## ⚙️ Backend
 
-- **MongoDB Atlas** (Cloud Database)
+- Node.js
+- Express.js
+- REST APIs
+- JWT Authentication
+- bcrypt Password Hashing
+- Nodemailer
 
 ---
 
-## Development & Hosting
+## 🗄 Database
 
-- **Git & GitHub**
-- **Render** (Production Deployment)
+- MongoDB Atlas
+- Mongoose ODM
+
+---
+
+## 🚀 Deployment & Tools
+
+- Git
+- GitHub
+- Render
+- Postman
+- VS Code
 
 ---
 
 # 🏗 System Architecture
 
 ```
-             React Frontend (Vite)
-                       │
-                       │ REST API Requests
-                       ▼
-          Express.js + Node.js Server
-                       │
-                       ▼
-                 MongoDB Atlas
+                        Browser
+                           │
+                           ▼
+                  React Frontend (Vite)
+                           │
+                  REST API Requests
+                           │
+                           ▼
+               Express.js + Node.js Server
+                           │
+          ┌────────────────┼────────────────┐
+          │                │                │
+          ▼                ▼                ▼
+   JWT Authentication   Business Logic   Email Service
+      Middleware                           (Nodemailer)
+          │
+          ▼
+      MongoDB Atlas
 ```
 
 ---
@@ -160,21 +226,44 @@ Emails are generated using **Nodemailer** with premium, fully-responsive CSS tem
 Placify
 │
 ├── backend
-│   ├── middleware/        # Authentication & Role verification middlewares
-│   ├── models/            # Mongoose Schemas (User, Drive, Application, Notification)
-│   ├── routes/            # Express Router Endpoint logic
-│   ├── utils/             # Mailer utility (Nodemailer setup)
-│   ├── server.js          # Entrypoint script
+│   ├── middleware/
+│   │   ├── authMiddleware.js
+│   │   └── roleMiddleware.js
+│   │
+│   ├── models/
+│   │   ├── User.js
+│   │   ├── Drive.js
+│   │   ├── Application.js
+│   │   └── Notification.js
+│   │
+│   ├── routes/
+│   │   ├── auth.js
+│   │   ├── users.js
+│   │   ├── drives.js
+│   │   ├── applications.js
+│   │   └── notifications.js
+│   │
+│   ├── utils/
+│   │   └── mailer.js
+│   │
+│   ├── server.js
 │   └── package.json
 │
 ├── frontend
 │   ├── src/
-│   │   ├── components/    # Reusable components (Navbar, Sidebar, ProtectedRoute)
-│   │   ├── layouts/       # Main Dashboard Layout wrappers
-│   │   ├── pages/         # Page Views (student, tpo, admin, public)
-│   │   ├── services/      # Context providers (AuthContext, PlacementContext)
+│   │   ├── components/
+│   │   ├── layouts/
+│   │   ├── pages/
+│   │   │   ├── student/
+│   │   │   ├── tpo/
+│   │   │   ├── admin/
+│   │   │   └── public/
+│   │   │
+│   │   ├── routes/
+│   │   ├── services/
 │   │   ├── App.jsx
 │   │   └── main.jsx
+│   │
 │   ├── vite.config.js
 │   └── package.json
 │
@@ -186,22 +275,52 @@ Placify
 
 # 👥 User Roles
 
-### Student
-- Register / Login
-- Manage profile, resume, and skills
-- Apply for eligible drives
-- View round stage progress and receive email alerts
+## 👨‍🎓 Student
 
-### TPO
-- Create and edit recruitment drives
-- Verify registered students
-- Advance or reject students in recruitment stages
-- Provide feedback to applicants
+Students can:
 
-### Admin
-- Monitor campus statistics
-- Manage all registered users
-- Suspend accounts to restrict portal access
+- Register
+- Login
+- Update Profile
+- Upload Resume
+- Add Skills
+- Add GitHub & LinkedIn Links
+- View Placement Drives
+- Apply for Eligible Drives
+- Track Application Status
+- View Activity Timeline
+- Receive Notifications
+
+---
+
+## 👨‍💼 Training & Placement Officer (TPO)
+
+TPOs can:
+
+- Verify Student Profiles
+- Create Placement Drives
+- Edit Placement Drives
+- Delete Placement Drives
+- View Applicants
+- Advance Students through Recruitment Stages
+- Reject Applications
+- Send Feedback
+- Export Applicant Data
+- Monitor Placement Statistics
+
+---
+
+## 👨‍💼 Administrator
+
+Administrators can:
+
+- View Overall Placement Statistics
+- Manage Students
+- Manage TPO Accounts
+- Suspend User Accounts
+- Activate User Accounts
+- Generate Reports
+- Monitor Department-wise Performance
 
 ---
 
@@ -211,108 +330,213 @@ Placify
 Student Registration
         │
         ▼
-Profile Verification by TPO
+Login using JWT Authentication
+        │
+        ▼
+Student Completes Profile
+        │
+        ▼
+TPO Verifies Profile
         │
         ▼
 Placement Drive Published
         │
         ▼
-Eligibility Verification (Auto-check)
+Eligibility Calculator Runs
         │
         ▼
-Student Applies
+Eligible Student Applies
         │
         ▼
-Recruitment Rounds (Aptitude -> Technical -> HR)
+Application Stored in MongoDB
         │
         ▼
-Selected / Rejected (Trigger status & email dispatch)
+TPO Reviews Applicant
+        │
+        ▼
+Aptitude Test
+        │
+        ▼
+Technical Interview
+        │
+        ▼
+HR Interview
+        │
+        ▼
+Selected / Rejected
+        │
+        ▼
+Email Notification Sent
+        │
+        ▼
+Activity Timeline Updated
 ```
 
 ---
 
+# 📡 REST API Overview
+
+## Authentication
+
+| Method | Endpoint | Description |
+|---------|----------|-------------|
+| POST | `/api/auth/register` | Register a new user |
+| POST | `/api/auth/login` | User login |
+| GET | `/api/auth/me` | Fetch logged-in user |
+| PUT | `/api/auth/profile` | Update profile |
+
+---
+
+## Placement Drives
+
+| Method | Endpoint | Description |
+|---------|----------|-------------|
+| GET | `/api/drives` | Get all drives |
+| POST | `/api/drives` | Create drive |
+| PUT | `/api/drives/:id` | Update drive |
+| DELETE | `/api/drives/:id` | Delete drive |
+
+---
+
+## Applications
+
+| Method | Endpoint | Description |
+|---------|----------|-------------|
+| GET | `/api/applications` | Get applications |
+| POST | `/api/applications` | Apply for drive |
+| PUT | `/api/applications/:id` | Update application status |
+
+---
+
+## Users
+
+| Method | Endpoint | Description |
+|---------|----------|-------------|
+| GET | `/api/users` | Get users |
+| PUT | `/api/users/:id` | Update user |
+| PUT | `/api/users/:id/status` | Suspend / Activate |
+
+---
+
+## Notifications
+
+| Method | Endpoint | Description |
+|---------|----------|-------------|
+| GET | `/api/notifications` | Fetch notifications |
+| POST | `/api/notifications` | Create notification |
 # 🗄 Database Models
 
-The MongoDB database consists of 4 main collections with the following structures:
+Placify uses **MongoDB Atlas** as its cloud database. The application consists of four primary collections.
 
-### 👤 User
-Stores details of registered Students, TPOs, and Admins:
-* `name`: Full Name
-* `email`: Email Address (unique, index)
-* `password`: Bcrypt-hashed password
-* `role`: User role (`student`, `tpo`, `admin`)
-* `status`: Account status (`Active`, `Suspended`)
-* `verificationStatus`: Profile validation (`Verified`, `Unverified`, `Rejected`)
-* `verificationRemarks`: TPO remarks on profile status
-* `cgpa`: Academic CGPA (students only)
-* `department`: Academic Department (e.g. `CSE`, `IT`)
-* `phone`: Contact Phone Number
-* `skills`: Professional skills summary
-* `graduationYear`: Year of graduation
-* `resumeUrl`: Link or Base64-encoded PDF resume
-* `resumeName`: Name of the uploaded resume file
-* `githubUrl`: GitHub Portfolio link
-* `linkedinUrl`: LinkedIn Profile link
+---
 
-### 💼 Drive
-Stores placement recruitment drives published by TPOs:
-* `company`: Hiring Company Name
-* `role`: Position Role Title
-* `package`: Annual Salary Package (e.g. `₹8 LPA`)
-* `cgpa`: Minimum required CGPA
-* `departments`: Eligible departments comma-separated list
-* `deadline`: Application deadline date
-* `location`: Job Location (e.g. `On Campus`, `Virtual`)
-* `status`: Active status (`Open`, `Closed`, `Upcoming`)
+## 👤 User Collection
 
-### 📝 Application
-Tracks student job applications to different placement drives:
-* `studentName`: Candidate's full name
-* `studentEmail`: Candidate's email address
-* `student`: Reference to candidate's User document ID
-* `driveId`: Reference to hiring Drive document ID
-* `role`: Job position role title
-* `company`: Hiring company name
-* `package`: Salary package offered
-* `date`: Application submission date
-* `status`: Progress stage (`Pending`, `Aptitude Test`, `Technical Interview`, `HR Interview`, `Selected`, `Rejected`)
-* `cgpa`: CGPA of student at application time
-* `feedback`: Evaluation feedback provided by TPO
+Stores information about Students, TPOs, and Admins.
 
-### 🔔 Notification
-Stores in-app messages and broadcast notifications:
-* `message`: Content of notification
-* `type`: Visual style type (`info`, `success`, `warning`, `danger`)
-* `date`: Dispatched timestamp
-* `forEmail`: Target user email (or role broadast `all`, `tpo`, `admin`)
-* `read`: Read state flag (`true`, `false`)
-* `path`: Action routing destination path on click
+| Field | Description |
+|------|-------------|
+| name | Full Name |
+| email | Unique Email Address |
+| password | Bcrypt Hashed Password |
+| role | student / tpo / admin |
+| department | Student Department |
+| cgpa | Academic CGPA |
+| attendance | Attendance Percentage |
+| backlogs | Number of Active Backlogs |
+| phone | Contact Number |
+| skills | Technical Skills |
+| githubUrl | GitHub Profile |
+| linkedinUrl | LinkedIn Profile |
+| resumeUrl | Resume File |
+| verificationStatus | Verified / Pending / Rejected |
+| verificationRemarks | Remarks by TPO |
+| status | Active / Suspended |
+
+---
+
+## 💼 Drive Collection
+
+Stores placement drive information.
+
+| Field | Description |
+|------|-------------|
+| company | Company Name |
+| role | Job Role |
+| package | Salary Package |
+| cgpa | Minimum Required CGPA |
+| departments | Eligible Branches |
+| location | Job Location |
+| deadline | Last Date to Apply |
+| status | Open / Closed / Upcoming |
+
+---
+
+## 📝 Application Collection
+
+Stores every application submitted by students.
+
+| Field | Description |
+|------|-------------|
+| student | Student Reference |
+| drive | Drive Reference |
+| company | Company Name |
+| role | Job Role |
+| package | Salary |
+| status | Pending / Aptitude / Technical / HR / Selected / Rejected |
+| feedback | TPO Feedback |
+| appliedDate | Application Date |
+
+---
+
+## 🔔 Notification Collection
+
+Stores system notifications.
+
+| Field | Description |
+|------|-------------|
+| message | Notification Content |
+| type | success / warning / info |
+| target | Student / TPO / Admin |
+| read | Read Status |
+| createdAt | Timestamp |
 
 ---
 
 # 🚀 Installation
 
-Clone the repository:
+Clone the repository
+
 ```bash
 git clone https://github.com/siribhargavi-t/Placify.git
 ```
 
-Install all dependencies (root, frontend, and backend):
+Go inside the project
+
+```bash
+cd Placify
+```
+
+Install dependencies
+
 ```bash
 npm run install:all
 ```
 
-Start the local development servers:
+Run the development server
+
 ```bash
 npm run dev
 ```
 
-Build the frontend for production:
+Build the frontend
+
 ```bash
 npm run build
 ```
 
-Start the production backend server:
+Start production server
+
 ```bash
 npm start
 ```
@@ -321,53 +545,137 @@ npm start
 
 # 🔑 Environment Variables
 
-Create a `.env` file inside the `backend/` directory:
+Create a `.env` file inside the **backend** directory.
+
 ```env
 PORT=5000
+
 NODE_ENV=production
-MONGO_URI=your_mongodb_atlas_connection_string
-JWT_SECRET=your_long_jwt_secret_token
+
+MONGO_URI=your_mongodb_connection_string
+
+JWT_SECRET=your_jwt_secret
+
 EMAIL_SERVICE=gmail
-EMAIL_USER=your_gmail_address@gmail.com
-EMAIL_PASS=your_gmail_app_password
+
+EMAIL_USER=your_project_email@gmail.com
+
+EMAIL_PASS=your_google_app_password
 ```
 
 ---
 
 # 👨‍💻 Demo Credentials
 
-The application automatically seeds initial data if the database is empty when the backend starts.
+The application automatically seeds demo users when the database is empty.
 
-You can use the following credentials (or autofill them directly in the login page):
+## 👨‍🎓 Student
 
-### Student
-* **Email:** `student@placify.com`
-* **Password:** `password123`
+```
+Email:
+student@placify.com
 
-### TPO
-* **Email:** `tpo@placify.com`
-* **Password:** `password123`
+Password:
+password123
+```
 
-### Admin
-* **Email:** `admin@placify.com`
-* **Password:** `password123`
+---
+
+## 👨‍💼 TPO
+
+```
+Email:
+tpo@placify.com
+
+Password:
+password123
+```
+
+---
+
+## 👨‍💼 Admin
+
+```
+Email:
+admin@placify.com
+
+Password:
+password123
+```
+
+---
+
+# 📸 Screenshots
+
+
+## 🏠 Login Page
+
+![Home](screenshots/login.png)
+
+---
+
+## 👨‍🎓 Student Dashboard
+
+![Student Dashboard](screenshots/student-dashboard.png)
+
+---
+
+
+## 👨‍💼 TPO Dashboard
+
+![TPO Dashboard](screenshots/tpo-dashboard.png)
+
+---
+
+## 👨‍💼 Admin Dashboard
+
+![Admin Dashboard](screenshots/admin-dashboard.png)
 
 ---
 
 # 📈 Future Enhancements
 
-- **AI Resume Screening**: Score matching score relative to job descriptions.
-- **Direct Interview Scheduler**: Calendar integrations for recruiters.
-- **Placement Prediction Model**: ML predictive index based on academic historical stats.
-- **Real-Time Direct Chat**: Messaging channels between Students and the Placement cell.
-- **Placement Performance Charts**: Visual analytics using ChartJS/Recharts.
+- 🤖 AI Resume Screening
+- 📅 Interview Scheduling
+- 📊 Advanced Placement Analytics
+- 📱 Mobile Application
+- 💬 Real-Time Chat
+- 🎥 Video Interview Integration
+- 📄 Resume Parsing
+- 📈 Placement Prediction using Machine Learning
+- 🏆 Company Recommendation Engine
+- 🔍 Resume Keyword Matching
 
 ---
 
-## 👩‍💻 Author
+# ⚠️ Disclaimer
 
-**Siri Bhargavi**
+This project is developed for **educational and portfolio purposes**.
 
-* **GitHub:** https://github.com/siribhargavi-t
-* **Live Demo:** https://placify-f81j.onrender.com
-* **Project Repository:** https://github.com/siribhargavi-t/Placify
+The live application uses **demo accounts and sample data**. No real student information is intentionally exposed in the public deployment.
+
+---
+
+# 👩‍💻 Author
+
+## T. Siri Bhargavi
+
+🎓 Computer Science Engineering Student
+
+🌐 **Live Demo**
+
+https://placify-f81j.onrender.com
+
+💻 **GitHub**
+
+https://github.com/siribhargavi-t
+
+📂 **Repository**
+
+https://github.com/siribhargavi-t/Placify
+
+---
+
+# ⭐ If you found this project helpful
+
+Please consider giving it a ⭐ on GitHub.
