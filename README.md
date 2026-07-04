@@ -231,6 +231,65 @@ Selected / Rejected (Trigger status & email dispatch)
 
 ---
 
+# 🗄 Database Models
+
+The MongoDB database consists of 4 main collections with the following structures:
+
+### 👤 User
+Stores details of registered Students, TPOs, and Admins:
+* `name`: Full Name
+* `email`: Email Address (unique, index)
+* `password`: Bcrypt-hashed password
+* `role`: User role (`student`, `tpo`, `admin`)
+* `status`: Account status (`Active`, `Suspended`)
+* `verificationStatus`: Profile validation (`Verified`, `Unverified`, `Rejected`)
+* `verificationRemarks`: TPO remarks on profile status
+* `cgpa`: Academic CGPA (students only)
+* `department`: Academic Department (e.g. `CSE`, `IT`)
+* `phone`: Contact Phone Number
+* `skills`: Professional skills summary
+* `graduationYear`: Year of graduation
+* `resumeUrl`: Link or Base64-encoded PDF resume
+* `resumeName`: Name of the uploaded resume file
+* `githubUrl`: GitHub Portfolio link
+* `linkedinUrl`: LinkedIn Profile link
+
+### 💼 Drive
+Stores placement recruitment drives published by TPOs:
+* `company`: Hiring Company Name
+* `role`: Position Role Title
+* `package`: Annual Salary Package (e.g. `₹8 LPA`)
+* `cgpa`: Minimum required CGPA
+* `departments`: Eligible departments comma-separated list
+* `deadline`: Application deadline date
+* `location`: Job Location (e.g. `On Campus`, `Virtual`)
+* `status`: Active status (`Open`, `Closed`, `Upcoming`)
+
+### 📝 Application
+Tracks student job applications to different placement drives:
+* `studentName`: Candidate's full name
+* `studentEmail`: Candidate's email address
+* `student`: Reference to candidate's User document ID
+* `driveId`: Reference to hiring Drive document ID
+* `role`: Job position role title
+* `company`: Hiring company name
+* `package`: Salary package offered
+* `date`: Application submission date
+* `status`: Progress stage (`Pending`, `Aptitude Test`, `Technical Interview`, `HR Interview`, `Selected`, `Rejected`)
+* `cgpa`: CGPA of student at application time
+* `feedback`: Evaluation feedback provided by TPO
+
+### 🔔 Notification
+Stores in-app messages and broadcast notifications:
+* `message`: Content of notification
+* `type`: Visual style type (`info`, `success`, `warning`, `danger`)
+* `date`: Dispatched timestamp
+* `forEmail`: Target user email (or role broadast `all`, `tpo`, `admin`)
+* `read`: Read state flag (`true`, `false`)
+* `path`: Action routing destination path on click
+
+---
+
 # 🚀 Installation
 
 Clone the repository:
